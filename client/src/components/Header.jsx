@@ -1,8 +1,10 @@
 const Header = () => {
     return (
-        <header className="bg-blue-600 py-4">
+        <header className="bg-gradient-to-r from-blue-600 to-blue-800 py-4 shadow-lg">
             <div className="container mx-auto px-4">
-                <h1 className="text-2xl font-bold text-white">Expense Tracker</h1>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center md:text-left">
+                    Expense Tracker
+                </h1>
             </div>
         </header>
     );

@@ -35,11 +35,30 @@ function App() {
             <Header />
             <main className="container mx-auto px-4 py-8">
                 <Balance transactions={transactions} />
-                <AddTransaction onTransactionAdded={handleTransactionAdded} />
-                <TransactionList 
-                    transactions={transactions} 
-                    onTransactionDeleted={handleTransactionDeleted} 
-                />
+                
+                {/* Desktop Layout */}
+                <div className="hidden lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div className="lg:col-span-4">
+                        <div className="sticky top-8">
+                            <AddTransaction onTransactionAdded={handleTransactionAdded} />
+                        </div>
+                    </div>
+                    <div className="lg:col-span-8">
+                        <TransactionList 
+                            transactions={transactions} 
+                            onTransactionDeleted={handleTransactionDeleted} 
+                        />
+                    </div>
+                </div>
+
+                {/* Mobile Layout */}
+                <div className="lg:hidden">
+                    <AddTransaction onTransactionAdded={handleTransactionAdded} />
+                    <TransactionList 
+                        transactions={transactions} 
+                        onTransactionDeleted={handleTransactionDeleted} 
+                    />
+                </div>
             </main>
         </div>
     );
