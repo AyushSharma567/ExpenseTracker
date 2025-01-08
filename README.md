@@ -16,7 +16,7 @@ A simple expense tracking application built with the MERN stack (MongoDB, Expres
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone <repository-url>
+    git clone https://github.com/AyushSharma567/ExpenseTracker.git
     cd ExpenseTracker
     ```
 2. Install backend dependencies:
