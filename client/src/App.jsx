@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Balance from './components/Balance';
 import AddTransaction from './components/AddTransaction';
 import TransactionList from './components/TransactionList';
+import ThemeToggle from './components/ThemeToggle';
 import { getTransactions } from './utils/api';
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
             <Toaster position="top-right" />
             <Header />
             <main className="container mx-auto px-4 py-8">
@@ -60,6 +61,7 @@ function App() {
                     />
                 </div>
             </main>
+            <ThemeToggle />
         </div>
     );
 }
